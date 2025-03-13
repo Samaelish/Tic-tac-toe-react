@@ -24,9 +24,9 @@ function Board() {
   const winner = calculateWinner(squares)
   let status
   if (winner) {
-    status = `Winner: ${winner}`
+    status = `Победитель: ${winner}`
   } else {
-    status = `Next player: ${isXNext ? 'X' : 'O'}`
+    status = `Следующий игрок: ${isXNext ? 'X' : 'O'}`
   }
 
   const handleRestart = () => {
@@ -35,11 +35,11 @@ function Board() {
 
   return (
     <div className='board-container'>
-      <h2>Tic Tac Toe</h2>
+      <h2>Крестики-нолики</h2>
       <div className='row'>{status}</div>
       <div className='row'>
         <button className='restart-btn' onClick={handleRestart}>
-          Restart
+          Рестарт
         </button>
       </div>
       <div className='board-row'>
